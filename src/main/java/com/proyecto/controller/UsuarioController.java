@@ -64,8 +64,16 @@ public class UsuarioController {
         usuario2.setEmail("joseeey@gmail.com");
         usuario2.setTelefono("155789367");
 
+        Usuario usuario3 = new Usuario();
+        usuario3.setId(5L);
+        usuario3.setNombre("Jose");
+        usuario3.setApellido("Puentes");
+        usuario3.setEmail("joseeey@gmail.com");
+        usuario3.setTelefono("155789367");
+
         usuarios.add(usuario1);
         usuarios.add(usuario2);
+        usuarios.add(usuario3);
 
         return usuarios;
     }
