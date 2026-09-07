@@ -1,6 +1,7 @@
 package com.proyecto.controller;
 
 import com.proyecto.models.Usuario;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,4 +31,19 @@ public class UsuarioController {
 
         return usuario;
     }
+
+    @RequestMapping(value="usuario/{id}")       //{} para pasar variables por medio de la ruta
+    public Usuario getUsuario(@PathVariable Long id){       // PathVariable recibe un valor desde la url
+        Usuario usuario = new Usuario();
+
+        usuario.setId(id);
+        usuario.setNombre("Diego");
+        usuario.setApellido("Vargas");
+        usuario.setEmail("dvargasgodoy@gmail.com");
+        usuario.setTelefono("155619965");
+
+        return usuario;
+    }
+
+
 }
