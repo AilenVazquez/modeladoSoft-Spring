@@ -46,7 +46,7 @@ public class UsuarioController {
         return usuario;
     }
 
-    @RequestMapping(value="listar_user")
+    @RequestMapping(value="usuario/lista_user")
     public List<Usuario> listar_variosUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
 
