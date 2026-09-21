@@ -1,12 +1,29 @@
 package com.proyecto.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="usuario")
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)   //Para que hibernate mapee el id como primary key
+    @Column(name="id")
     private Long id;
+
+    @Column(name="nombre")
     private String nombre;
+
+    @Column(name="apellido")
     private String apellido;
+
+    @Column(name="email")
     private String email;
+
+    @Column(name="telefono")
     private String telefono;
+
+    @Column(name="password")
     private String password;
 
     //- - - - - - - GETTERS - - - - - - -

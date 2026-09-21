@@ -1,6 +1,5 @@
-package com.proyecto.controller;
+package com.proyecto.dao;
 
-import com.proyecto.dao.UsuarioDao;
 import com.proyecto.models.Usuario;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
