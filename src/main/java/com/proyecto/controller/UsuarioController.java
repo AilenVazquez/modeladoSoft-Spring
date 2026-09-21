@@ -1,6 +1,8 @@
 package com.proyecto.controller;
 
+import com.proyecto.dao.UsuarioDao;
 import com.proyecto.models.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,9 @@ import java.util.List;
 
 @RestController
 public class UsuarioController {
+
+    @Autowired  
+    private UsuarioDao usuarioDao;
 
     @RequestMapping(value="prueba")
     public String prueba(){
@@ -76,6 +81,12 @@ public class UsuarioController {
         usuarios.add(usuario3);
 
         return usuarios;
+    }
+
+    @RequestMapping(value="api/usuarios")
+    public List<Usuario> getUsuario(){
+        List<Usuario> user=usuarioDao.obtenerUsuarios();
+        return user;
     }
 
 
