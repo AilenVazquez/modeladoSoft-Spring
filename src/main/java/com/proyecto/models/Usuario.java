@@ -26,6 +26,10 @@ public class Usuario {
     @Column(name="password")
     private String password;
 
+    //- - - - - - CONSTRUCTOR - - - - - -
+    public Usuario() {
+    }
+
     //- - - - - - - GETTERS - - - - - - -
     public Long getId() {
         return id;
@@ -75,5 +79,18 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    //- - - - - - - TO STRING - - - - - - -
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
